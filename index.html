@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatalone</title>
+<!--avatar1-->
+<style>
+    .avatar{
+        width: 60px;
+        border-radius: 30px;
+    }
+    .msm1{
+        background-color: mediumvioletred;
+        color: white;
+        padding: 13px;
+        border-radius: 25px;
+        border-bottom-left-radius: 0%;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .usuario1{
+        display: flex;
+
+    }
+
+</style>
+<!--avatar2-->
+<style>
+    
+
+   
+    .msm2{
+        background-color: green;
+        color: white;
+        padding: 13px;
+        border-radius: 25px;
+        border-bottom-left-radius: 0%;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .usuario2{
+        display: flex;
+        margin-left: 20%;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div id="contenedor"></div>
+
+
+
+</div>
+
+<div>
+    <!--mensaje usuario 2-->
+
+
+
+
+</div>
+<div style="display: flex;">
+    <div>
+        <input type="text" id="mensaje1">
+        <button onclick="msmUsuario1()">usuario 1</button>
+    
+    </div>
+    <div>
+        <input type="text" id="mensaje2">
+        <button onclick="msmUsuario2()">usuario 2</button>
+    </div>
+    
+</div>
+
+
+
+<script>
+var caja= document.getElementById('contenedor')
+    
+    console.log(caja.outerHTML)
+
+    function msmUsuario1(){
+
+        var contenidoActual = caja.outerHTML
+        var text= document.getElementById("mensaje1").value
+        
+        caja.innerHTML= `${contenidoActual}<div class="usuario1">
+
+    <div><img class="avatar"src="https://st2.depositphotos.com/47577860/46999/v/450/depositphotos_469997622-stock-illustration-avatar-cheeky-emoji-icon-in.jpg" alt="">
+    
+    </div>
+    
+    <div class="msm1">
+        <span>${texto}</span><br>
+        <span>09:25</span>
+    </div>
+        
+    </div>`
+    document.getElementById('mensaje1').value=''
+    }
+
+
+    
+    
+    console.log(caja.outerHTML)
+
+    function msmUsuario2(){
+        var contenidoActual = caja.outerHTML
+        caja.innerHTML= `${contenidoActual}<div class="usuario2">
+      <div>  
+<img class="avatar"src="https://thumbs.dreamstime.com/z/cara-de-monstruo-caricatura-divertida-avatar-cuadrado-vectorial-del-halloween-175918891.jpg" alt="">
+
+</div>
+
+<div class="msm2">
+    <span>Hola como estas te estoy</span><br>
+    <span>09:25</span>
+</div>
+
+</div>`
+}
+
+
+</script>
+
+    
+</body>
+</html>
